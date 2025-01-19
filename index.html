@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Request Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Download Request Form</h1>
+        </header>
+
+        <main>
+            <form id="requestForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="appName">Application/Program Name *</label>
+                    <input type="text" id="appName" name="appName" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" maxlength="500"></textarea>
+                    <div class="char-count"><span id="charCount">0</span>/500</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason for Requesting</label>
+                    <textarea id="reason" name="reason"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority Level *</label>
+                    <select id="priority" name="priority" required>
+                        <option value="">Select Priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn">Submit Request</button>
+                    <button type="reset" id="resetBtn">Clear Form</button>
+                </div>
+
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Download Request System. All rights reserved.</p>
+        </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
